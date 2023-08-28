@@ -5,6 +5,10 @@
         "containerGroups_consoleappcontainer_name": {
             "defaultValue": "consoleappcontainer",
             "type": "String"
+        },
+        "image": {
+            "defaultValue": "devopsdemo1222.azurecr.io/codingmakeover/testconsoleapp",
+            "type": "String"
         }
     },
     "variables": {},
