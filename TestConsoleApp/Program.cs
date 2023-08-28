@@ -3,7 +3,7 @@
 for (int i = 10000; i > 0; i--)
 {
     Thread.Sleep(500);
-    Console.WriteLine($"{i} -- Hello, World!");
+    Console.WriteLine($"{i} test -- Hello, World!");
 }
 
 //  docker image build --no-cache -t dotnet6consoleapp:v2 .
