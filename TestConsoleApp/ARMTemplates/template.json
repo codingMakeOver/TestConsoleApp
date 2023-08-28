@@ -1,0 +1,62 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "containerGroups_consoleappcontainer_name": {
+            "defaultValue": "consoleappcontainer",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2023-05-01",
+            "name": "[parameters('containerGroups_consoleappcontainer_name')]",
+            "location": "centralindia",
+            "properties": {
+                "sku": "Standard",
+                "containers": [
+                    {
+                        "name": "[parameters('containerGroups_consoleappcontainer_name')]",
+                        "properties": {
+                            "image": "devopsdemo1222.azurecr.io/codingmakeover/testconsoleapp:34",
+                            "ports": [
+                                {
+                                    "protocol": "TCP",
+                                    "port": 80
+                                }
+                            ],
+                            "environmentVariables": [],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 1,
+                                    "cpu": 1
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "imageRegistryCredentials": [
+                    {
+                        "server": "devopsdemo1222.azurecr.io",
+                        "username": "devopsdemo1222",
+                        "password": "AZaJTZpAmYjdZ4W3aNwW9wsf+K9sUYVde34eqPGoUV+ACRBfIv6w"
+                    }
+                ],
+                "restartPolicy": "OnFailure",
+                "ipAddress": {
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 80
+                        }
+                    ],
+                    "type": "Public"
+                },
+                "osType": "Windows"
+            }
+        }
+    ]
+}
