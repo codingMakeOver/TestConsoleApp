@@ -18,7 +18,7 @@
             "value": "string"
         },
         "image": {
-            "value": "string"
+            "value": "devopsdemo1222.azurecr.io/codingmakeover/testconsoleapp"
         }
     }
 }

@@ -20,7 +20,7 @@
                     {
                         "name": "[parameters('containerGroups_consoleappcontainer_name')]",
                         "properties": {
-                            "image": "devopsdemo1222.azurecr.io/codingmakeover/testconsoleapp:34",
+                            "image": "[parameters('image')]",
                             "ports": [
                                 {
                                     "protocol": "TCP",
