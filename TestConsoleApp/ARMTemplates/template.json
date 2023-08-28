@@ -41,7 +41,8 @@
                 "imageRegistryCredentials": [
                     {
                         "server": "devopsdemo1222.azurecr.io",
-                        "username": "devopsdemo1222"
+                        "username": "devopsdemo1222",
+                        "password": "AZaJTZpAmYjdZ4W3aNwW9wsf+K9sUYVde34eqPGoUV+ACRBfIv6w",
                     }
                 ],
                 "restartPolicy": "OnFailure",
