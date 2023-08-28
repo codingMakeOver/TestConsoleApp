@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-for (int i = 0; i < 10000; i++)
+for (int i = 10000; i > 0; i--)
 {
     Thread.Sleep(500);
     Console.WriteLine($"{i} -- Hello, World!");
